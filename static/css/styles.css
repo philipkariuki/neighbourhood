@@ -14,10 +14,16 @@
 
 body {
 	background-color: #C6C5B9;
-	font-family: 'Amatic SC', cursive;
+	color: white;
 }
 
 h1
 {
-  color: brown;
+  color: black;
+  font-family: 'Permanent Marker', cursive;
+}
+p {
+
+	font-family: 'Amatic SC', cursive;
+	font-size: 30px;
 }
