@@ -1,1 +1,16 @@
-<h1>Neighbourhood</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  {% if title %}
+  <title>Neighbourhood - {{title}}</title>
+  {% else %}
+    <title> Neighbourhood </title>
+  {% endif %}
+
+</head>
+<body>
+    {% block content %} <h1> Neighbourhood App </h1> {%endblock%}
+</body>
+</html>
