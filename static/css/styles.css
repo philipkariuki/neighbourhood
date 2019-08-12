@@ -1,0 +1,23 @@
+.navbar-inverse {
+	background-color: #465775;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-family: 'Cinzel', serif;
+	/*color: olive !important;*/
+	/*font-size: 30px;*/
+}
+
+.navbar-inverse .navbar-brand {
+	font-size: 25px;
+	color: lime;
+}
+
+body {
+	background-color: #C6C5B9;
+	font-family: 'Amatic SC', cursive;
+}
+
+h1
+{
+  color: brown;
+}
