@@ -31,8 +31,8 @@ As a user, I would like to be able to do the following:
 ## Setup/Installation Requirements
 To clone this repo, open terminal in your desired folder then run:
 
-        $ git clone https://github.com/philipkariuki/moringa-awards/
-        $ cd /moringa-awards
+        $ git clone https://github.com/philipkariuki/neighbourhood/
+        $ cd /neighbourhood
 
 To create and activate the virtual environment and install pip:
 
@@ -51,7 +51,7 @@ To run the application, in your terminal:
         
 To run unittests:
 
-        $ python3.6 manage.py test awardsapp
+        $ python3.6 manage.py test hoodsapp
 
 ## Known Bugs
 
@@ -77,4 +77,4 @@ No known bugs
 To support me, you can contact me at <a href="https://www.gmail.com">philippokar@hotmail.co.uk</a>
 
 ## License
-[MIT © 2019](https://github.com/philipkariuki/moringa-awards/blob/master/LICENSE)
+[MIT © 2019](https://github.com/philipkariuki/neighbourhood/blob/master/LICENSE)
