@@ -22,11 +22,11 @@ As a user, I would like to be able to do the following:
 ## Specifications
 | Behaviour | Input | Output |
 | --------------- | :----------:| --------: |
-| Display all projects | On home page load | Loads all the available projects |
-| New User Project | Click New Project button from navbar | User redirected to new post page with forms for new project, which when filled redirects to home page with the new project  |
+| Display all posts for selected neighbourhood | On home page load | Loads all the available posts for chosen neighbourhood |
+| New User Post | Click New Post button from navbar | User redirected to new post page with forms for new post, which when filled redirects to home page with the new post  |
 | User registration | Fill required fields and click on register button | User's info is registered to the database and user is redirected to home page |
 | User login | Fill required fields and click on login button | User's info is confirmed with the database and user is redirected to home page, else if info doesn't match db records user is not able to login and access the home page |
-
+| Move to a different neighbourhood | From dropdown list select desired neighbourhood | User is switched to a different neighbourhood and can only see posts for that neighbourhood |
 
 ## Setup/Installation Requirements
 To clone this repo, open terminal in your desired folder then run:
