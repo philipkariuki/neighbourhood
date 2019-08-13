@@ -8,9 +8,9 @@ urlpatterns=[
     url(r'^post/(\d+)',views.post, name='post'),
     url(r'^profile/',views.profile,name ='profile'),
     url(r'^search/', views.search_results, name='search_results'),
-    url(r'^profile_update/',views.update_profile,name='profile_update')
+    url(r'^profile_update/',views.update_profile,name='profile_update'),
     url(r'^switch_hood/$', views.switch_hood,name='switch_hood')
-]
+    ]
 
 
 if settings.DEBUG:
