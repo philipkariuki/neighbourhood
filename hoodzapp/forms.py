@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post, UserProfile
+from .models import Post, UserProfile, Business, Thahood
 from django.contrib.auth.models import User
 
 
@@ -22,3 +22,9 @@ class ProfileForm(forms.ModelForm):
         model = UserProfile
         fields = ('bio', 'phone', 'projects', 'pic')
         # exclude = ['user','pub_date']
+
+
+class SwitchHoodForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ( 'neighbourhood' )

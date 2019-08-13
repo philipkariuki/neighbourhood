@@ -71,15 +71,6 @@ def profile(request):
 	return render(request,'profile.html', {'profile':argz} )
 
 
-# def profile(request):
-# 	try:
-# 		profile =Profile.objects.get(id=request.user.id)
-# 	except ObjectDoesNotExist:
-# 		raise Http404()
-# 	return render(request,'profile.html',{ 'profile':profile })
-
-
-
 
 @login_required
 @transaction.atomic
@@ -110,7 +101,7 @@ def search_results(request):
 
     if 'projectsearch' in request.GET and request.GET["projectsearch"]:
         search_term = request.GET.get("projectsearch")
-        searched_projects = Project.search_by_title(search_term)
+        searched_projects = Post.search_by_title(search_term)
         message = f"{search_term}"
         proj = Post.get_posts()
 
@@ -140,3 +131,20 @@ def new_post(request):
 
 
 
+@login_required(login_url='/accounts/login/')
+def switch_hood(request):
+    current_user = request.user
+    if request.method == 'POST':
+        form = SwitchHoodForm(request.POST)
+        if form.is_valid():
+            formdata = form.save(commit=False)
+            a_user = CustomUser.objects.filter(user_id=current_user.id).first()
+            a_user.neighbourhood = formdata.neighbourhood
+            a_user.save()
+
+            return redirect('index')
+
+    else:
+        form = SwitchHoodForm()
+
+    return render(request, 'move.html', {"form": form})
