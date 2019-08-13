@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .models import Post
+from .models import Post, Thahood, UserProfile, Business
 from .forms import NewPostForm, ProfileForm, UserForm
 from django.http  import HttpResponse, Http404, HttpResponseRedirect
 from registration.backends.simple.views import RegistrationView
@@ -15,26 +15,16 @@ from django.utils.translation import gettext as _
 @login_required(login_url='/accounts/login/')
 def index(request):
 
-	current_user = request.user
+	current_user = request.user	
 
-	# projectcomments = Comments.objects.order_by('-date_posted')
+	a_user = UserProfile.objects.filter(user_id=current_user.id).first()
 
-	if request.method == 'POST':
-		params = request.POST
-		project_id = params.get(key="project_id", default=None)
-		comment = params.get(key="comment", default=None)
-
-		if comment is not None and project_id is not None:
-			project = Project.objects.get(id = project_id)
-			profile = UserProfile.objects.get(user=current_user)
-			cmt = Comments(comment_content=comment, project=project, profile= profile)
-			cmt.save_comment()
+    if custom_user is None:
+        return redirect('profile_update')
 
 
-
-
-	project = Project.objects.select_related().all()
-	return render(request, 'index2.html', {'project': project })
+	post = Post.objects.filter(neighbourhood_id=custom_user.neighbourhood.id)
+	return render(request, 'index.html', {'post': post })
 
 
 
