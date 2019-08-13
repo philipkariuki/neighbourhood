@@ -20,7 +20,7 @@ def index(request):
 	a_user = UserProfile.objects.filter(user_id=current_user.id).first()
 
     if custom_user is None:
-        return redirect('profile_update')
+        return redirect('profile')
 
 
 	post = Post.objects.filter(neighbourhood_id=custom_user.neighbourhood.id)
