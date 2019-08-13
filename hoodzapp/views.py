@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import Post, Thahood, UserProfile, Business
-from .forms import NewPostForm, ProfileForm, UserForm
+from .forms import NewPostForm, ProfileForm, UserForm, SwitchHoodForm
 from django.http  import HttpResponse, Http404, HttpResponseRedirect
 from registration.backends.simple.views import RegistrationView
 from django.contrib.auth.decorators import login_required
