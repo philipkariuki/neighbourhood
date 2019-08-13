@@ -35,7 +35,6 @@
         </div>
         <!-- search form end -->
 
-
         <!--The search form above-->
         <ul class="nav navbar-nav navbar-right">
             
@@ -46,13 +45,16 @@
                         <a href="{% url 'index' %}">Home</a>
                     </li>
                     <li>
-                        <a href="#">New Post</a>
+                        <a href="{% url 'new-post' %}">New Post</a>
                     </li>
                     <li>
                         <a href="/accounts/password/change">Change Password</a>
                     </li>
                     <li>
-                        <a href="#">Profile</a></li>
+                        <a href="{% url 'profile' %}">Profile</a></li>
+                    </li>
+                    <li>
+                        <a href="{% url 'switch_hood' %}">Switch Hoods</a></li>
                     </li>
                     <li>
                         <a href="/logout">Logout</a>
