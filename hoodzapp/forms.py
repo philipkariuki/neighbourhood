@@ -26,7 +26,7 @@ class ProfileForm(forms.ModelForm):
 class SwitchHoodForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ( 'neighbourhood' )
-
+        # fields = ( 'neighbourhood')
+        exclude = ['bio', 'pub_date' ,'phone' , 'pic']
 
 

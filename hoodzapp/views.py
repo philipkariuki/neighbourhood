@@ -15,16 +15,16 @@ from django.utils.translation import gettext as _
 @login_required(login_url='/accounts/login/')
 def index(request):
 
-	current_user = request.user	
+    current_user = request.user
 
-	a_user = UserProfile.objects.filter(user_id=current_user.id).first()
-
+    a_user = UserProfile.objects.filter(user_id=current_user.id).first()
     if custom_user is None:
         return redirect('profile')
 
 
-	post = Post.objects.filter(neighbourhood_id=custom_user.neighbourhood.id)
-	return render(request, 'index.html', {'post': post })
+    post = Post.objects.filter(neighbourhood_id=custom_user.neighbourhood.id)
+    return render(request, 'index.html', {'post': post })
+
 
 
 
