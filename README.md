@@ -7,7 +7,7 @@ A Django python application that allows users to know what is happening in their
 ## Description
 The objective here is to create an application that allows its user to to be in the loop about everything happening in your neighborhood.
 
-Live link : https://welcometomyhood.herokuapp.com
+Live link : https://welcometoomyhood.herokuapp.com
 
 ## User Stories
 As a user, I would like to be able to do the following:
